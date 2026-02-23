@@ -25,4 +25,27 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 }, //sombra para iOS
         shadowOpacity: 0.1, //sombra para iOS
         shadowRadius: 4, //sombra para iOS
-    }
+    },
+    image: {
+        width: 80,
+        height: 80,
+        borderRadius: 8,
+    },
+    info: {
+        marginLeft: 15,
+        justifyContent: 'center',
+    },
+    nome: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    categoria: {
+        color: '#666',
+        fontSize: 14,
+    },
+    distancia: {
+        color: '#1baa52',
+        fontSize: 12,
+        marginTop: 5,
+    },
+});
