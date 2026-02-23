@@ -1,1 +1,1 @@
-Projeto desenvovlido em sala de aula,, utilizando react
+Projeto desenvolvido em sala de aula,, utilizando react
