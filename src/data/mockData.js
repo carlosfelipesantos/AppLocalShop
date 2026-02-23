@@ -1,9 +1,9 @@
 export const LOJAS = [
     {
     id: '1',
-    nome: 'Padaria do João',
+    nome: 'Padaria Boi Dourado',
     categoria: 'Padarias',
-    imagem: 'https://via.placeholder.com/150',
+    imagem: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP1MYjtDLqIXH71mgr6JZFvC0wUhkNHUrpXw&s',
     distancia: '0.5 km',
     },
     {
