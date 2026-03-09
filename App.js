@@ -1,13 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+
+import{NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
 import HomeScreen from './src/screens/Home/HomeScreen';
+import LojaDetalhes from './src/screens/Details/LojaDetalhes';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-     <HomeScreen />
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} options={{title: 'LocalShop'}}/>
+        <Stack.Screen name="Detalhes" component={LojaDetalhes} options={({route}) => ({title: route.params.loja.nome})}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

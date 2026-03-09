@@ -1,9 +1,13 @@
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default function LojaCard({loja}) {
+    const navigation = useNavigation();
     return (
-        <TouchableOpacity style={styles.card}>
-            <Image source={{uri: loja.imagem}} style={styles.image} />
+        <TouchableOpacity 
+        style={styles.card}
+        onPress={() => navigation.navigate('Detalhes', { loja })}
+        >
+            <Image source={{uri: loja.imagem}} style={styles.image}/>
             <View style={styles.info}>
                 <Text style={styles.nome}>{loja.nome}</Text>
                 <Text style={styles.categoria}>{loja.categoria}</Text>
@@ -12,40 +16,3 @@ export default function LojaCard({loja}) {
         </TouchableOpacity>
     );
 }
-
-const styles = StyleSheet.create({
-    card: {
-        flexDirection: 'row',   
-        backgroundColor: '#fff',
-        borderRadius: 8,
-        padding: 10,
-        marginBottom: 16,
-        elevation: 3, //sombra para Android
-        shadowColor: '#000', //sombra para iOS
-        shadowOffset: { width: 0, height: 2 }, //sombra para iOS
-        shadowOpacity: 0.1, //sombra para iOS
-        shadowRadius: 4, //sombra para iOS
-    },
-    image: {
-        width: 80,
-        height: 80,
-        borderRadius: 8,
-    },
-    info: {
-        marginLeft: 15,
-        justifyContent: 'center',
-    },
-    nome: {
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
-    categoria: {
-        color: '#666',
-        fontSize: 14,
-    },
-    distancia: {
-        color: '#1baa52',
-        fontSize: 12,
-        marginTop: 5,
-    },
-});
