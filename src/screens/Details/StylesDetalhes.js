@@ -1,7 +1,7 @@
-import {Stykesheet} from 'react-native';
-import { normalizeColorObject } from 'react-native/types_generated/Libraries/StyleSheet/PlatformColorValueTypes';
+import {StyleSheet} from 'react-native';
+import { normalizeColorObject } from 'react-native'
 
-export const styles = Stykesheet.create({
+export const styles = StyleSheet.create({
     container: { flex:1, backgroundColor: '#fff'},
     image: { width: '100%', height: 200},
     content: { padding: 20},

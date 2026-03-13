@@ -7,6 +7,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './src/screens/Home/HomeScreen';
 import LojaDetalhes from './src/screens/Details/LojaDetalhes';
 
+const Stack = createStackNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>

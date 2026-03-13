@@ -1,4 +1,6 @@
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {styles} from '../screens/Details/StylesDetalhes';
+import { useNavigation } from '@react-navigation/native';
 
 export default function LojaCard({loja}) {
     const navigation = useNavigation();

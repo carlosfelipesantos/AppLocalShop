@@ -1,10 +1,10 @@
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, Text, Image, ScrollView, Button} from 'react-native';
 import {styles} from './StylesDetalhes';
 
 
-export default function LojaDetalhes({route, navigantion}) {
+export default function LojaDetalhes({route, navigation}) {
 
-    const {loja} = route.params;DOMException
+    const {loja} = route.params;
 
     return (
         <View style = {styles.container}>
@@ -16,7 +16,7 @@ export default function LojaDetalhes({route, navigantion}) {
             
             <Button
             title="Voltar para Home"
-            onPress={() => navigantion.goBack()}
+            onPress={() => navigation.goBack()}
             color="#007BFF"
             />           
             </View>
